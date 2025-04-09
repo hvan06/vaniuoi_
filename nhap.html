@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fashion Shop</title>
+   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #fff;
+      position: relative;
+    }
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .logo img {
+      height: 40px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+    .icons {
+      display: flex;
+      gap: 10px;
+    }
+    #check {
+      display: none;
+    }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      z-index: 999;
+    }
+    .menu a {
+      padding: 10px;
+      border-top: 1px solid #ccc;
+    }
+    #check:checked ~ .menu {
+      display: flex;
+    }
+    .đầu {
+      width: 100%;
+      overflow: hidden;
+    }
+    .đầu img {
+      width: 100%;
+      height: auto;
+      border-radius: 100px 0px 100px 0px;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+    .product {
+      text-align: center;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .cuoi {
+      width: 100%;
+      overflow: hidden;
+     
+    }
+    .cuoi img {
+      width: 100%;
+      height: auto;
+      border-radius: 100px 0px 100px 0px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 1024px) {
+      nav, .icons {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+      .carousel {
+        display: none;
+      }
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .products {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <input type="checkbox" id="check">
+    <label for="check" class="hamburger"><i class="fa fa-bars"></i></label>
+    
+ 
+    <nav>
+      <a href="#">NỮ</a>
+      <a href="#">SIÊU DEAL</a>
+      <a href="#">BỘ SƯU TẬP</a>
+      <a href="#">VỀ CHÚNG TÔI</a>
+    </nav>
+    
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo">
+    </div>
+ 
+    <div class="icons">
+      <i class="fa fa-search"></i>
+      <i class="fa fa-shopping-cart"></i>
+    </div>
+ 
+    <div class="menu">
+      <a href="#">NỮ</a>
+      <a href="#">SIÊU DEAL</a>
+      <a href="#">BỘ SƯU TẬP</a>
+      <a href="#">VỀ CHÚNG TÔI</a>
+    </div>
+  </header>
+
+  <div class="đầu">
+    <img src="đầu.jpg" alt="đầu">
+  </div>
+
+  <h2>NEW ARRIVAL</h2>
+  <div class="products">
+    <div class="product">
+      <img src="sp1.jpg" alt="sp1">
+      <p>Moonlit Lace - Áo sơ mi lụa</p>
+      <p style="color:red;">1.800.000</p>
+    </div>
+    <div class="product">
+      <img src="sp2.jpg" alt="sp2">
+      <p>Obsidian Curve - Chân váy</p>
+      <p style="color:red;">1.400.000</p>
+    </div>
+    <div class="product">
+      <img src="sp3.jpg" alt="sp3">
+      <p>Mystic Veil Blouse</p>
+      <p style="color:red;">2.190.000</p>
+    </div>
+    <div class="product">
+      <img src="sp4.jpg" alt="sp4">
+      <p>Golden Gienne Dress</p>
+      <p style="color:red;">999.000</p>
+    </div>
+  </div>
+
+  <h2>GIẢM 50% CÁC SẢN PHẨM</h2>
+  <div class="products">
+    <div class="product">
+      <img src="sp5.jpg" alt="sp5">
+      <p>Celestial Ballet Dress</p>
+      <p style="color:red;">1.400.000</p>
+    </div>
+    <div class="product">
+      <img src="sp6.jpg" alt="sp6">
+      <p>Bliss Dress</p>
+      <p style="color:red;">845.000</p>
+    </div>
+    <div class="product">
+      <img src="sp7.jpg" alt="sp7">
+      <p>Áo vest Sophia Elegance</p>
+      <p style="color:red;">754.000</p>
+    </div>
+    <div class="product">
+      <img src="sp8.jpg" alt="sp8">
+      <p>Áo khoác blazer V Áo</p>
+      <p style="color:red;">1.099.000</p>
+    </div>
+  </div>
+
+  <div class="cuoi">
+    <img src="cuoi.jpg" alt="cuoi">
+  </div>
+
+  <div class="footer">
+    NGUYỄN HẢI VÂN - TUD-D2024 - 224001759
+  </div>
+</body>
+</html>
+
